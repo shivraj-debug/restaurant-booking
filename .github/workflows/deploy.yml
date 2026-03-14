@@ -7,7 +7,6 @@ on:
 
 jobs:
   build-and-deploy:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -36,7 +35,9 @@ jobs:
         npm run build
 
     - name: Deploy Frontend to Vercel
-      run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+      run: |
+        cd frontend
+        npx vercel deploy --prebuilt --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
 
     - name: Trigger Render Deploy
       run: curl ${{ secrets.RENDER_DEPLOY_HOOK }}
