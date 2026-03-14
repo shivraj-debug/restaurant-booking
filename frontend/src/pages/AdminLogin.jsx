@@ -44,7 +44,7 @@ const AdminLogin = () => {
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-orange-100 rounded-full blur-[80px] opacity-30 translate-y-1/4 -translate-x-1/4 pointer-events-none"></div>
 
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="w-full max-w-md bg-white rounded-2xl shadow-2xl shadow-gray-200 p-8 relative z-10 border border-gray-100"
